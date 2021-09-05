@@ -1,12 +1,17 @@
 import { useState } from "react";
 import Button from "@mui/material/Button";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import Answer from "./Answer";
 import Quote from "./Quote";
 import realQuotes from "../quotes_data/real";
 import fakeQuotes from "../quotes_data/fake";
 
-const getRandomQuoteIndex = (quotes) =>
-  Math.floor(Math.random() * quotes.length);
+const getRandomQuoteIndex = (quotes) => getRandomInt(quotes.length);
+
+const getRandomInt = (max) => {
+  return Math.floor(Math.random() * max);
+};
 
 const Game = () => {
   const [currentFakeQuotes, setCurrentFakeQuotes] = useState(fakeQuotes);
@@ -18,10 +23,10 @@ const Game = () => {
     getRandomQuoteIndex(currentRealQuotes)
   );
   const [checked, setChecked] = useState(false);
-
-  const handleCheckAnswer = () => {
-    setChecked((prev) => !prev);
-  };
+  const [answer, setAnswer] = useState("");
+  const [randomInt, setRandomInt] = useState(getRandomInt(2));
+  const [score, setScore] = useState(0);
+  const [isCorrect, setIsCorrect] = useState(false);
 
   const updateQuotes = () => {
     const newRealQuotes = Array.from(currentRealQuotes);
@@ -33,38 +38,95 @@ const Game = () => {
     setChecked(false);
     setFakeQuoteIndex(getRandomQuoteIndex(newFakeQuotes));
     setRealQuoteIndex(getRandomQuoteIndex(newRealQuotes));
+    setAnswer("");
+    setRandomInt(getRandomInt(2));
+    let currentScore = Number(score);
+    if (isCorrect) {
+      currentScore++;
+    }
+    setScore(currentScore);
+  };
+
+  const currentRealQuote = currentRealQuotes[realQuoteIndex];
+  const currentFakeQuote = currentFakeQuotes[fakeQuoteIndex];
+
+  const leftQuote = randomInt === 1 ? currentRealQuote : currentFakeQuote;
+  const rightQuote =
+    leftQuote === currentRealQuote ? currentFakeQuote : currentRealQuote;
+
+  const handleCardSelect = (quote) => {
+    setAnswer(quote);
+  };
+
+  const handleCheckAnswer = () => {
+    if (answer === currentRealQuote) {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+    setChecked((prev) => !prev);
   };
 
   return (
-    <>
+    <Grid
+      container
+      spacing={2}
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+    >
       {currentFakeQuotes.length > 0 ? (
         <>
-          <Quote quote={currentRealQuotes[realQuoteIndex]} />
-          <Quote quote={currentFakeQuotes[fakeQuoteIndex]} />
-          {!checked && (
-            <Button onClick={handleCheckAnswer}>Check answer</Button>
-          )}
-          <Answer checked={checked} />
-          {checked && <Button onClick={updateQuotes}>Try again</Button>}
+          <Grid item xs={6}>
+            <Quote
+              quote={leftQuote}
+              onCardSelect={handleCardSelect}
+              selected={answer === leftQuote}
+              enabled={!checked}
+            />
+          </Grid>
+          <Grid item xs={6}>
+            <Quote
+              quote={rightQuote}
+              onCardSelect={handleCardSelect}
+              selected={answer === rightQuote}
+              enabled={!checked}
+            />
+          </Grid>
+          <Grid item xs={12}>
+            {!checked && (
+              <Button
+                variant={"contained"}
+                size={"large"}
+                onClick={handleCheckAnswer}
+                disabled={answer === ""}
+              >
+                Check answer
+              </Button>
+            )}
+            {checked && (
+              <Button
+                variant={"contained"}
+                size={"large"}
+                onClick={updateQuotes}
+              >
+                Next
+              </Button>
+            )}
+          </Grid>
+          <div>
+            <Answer checked={checked} isCorrect={isCorrect} />
+          </div>
         </>
       ) : (
-        <p>You're done! Refresh the page to play again</p>
+        <>
+          <Typography variant="h4" component="p">
+            You're done! You scored {score}/13!
+          </Typography>
+        </>
       )}
-    </>
+    </Grid>
   );
 };
 
 export default Game;
-
-/*
-
-- Click Start Game (Play music on click)
-- Play music on click
-- Get 2 random quotes from store, show them on cards
-- Highlight clicked card, store selection
-- Check answers on click:
-    - Set checked to true, check and show answer
-
-- "Next" button: Remove these quotes from current store, set checked to false
-
-*/

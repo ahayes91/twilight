@@ -1,11 +1,10 @@
 import Slide from "@mui/material/Slide";
-import cake_pic from "../static/cake_pic.png";
 
-const Answer = ({ checked }) => {
+const Answer = ({ checked, isCorrect }) => {
   return (
     <>
       <Slide direction="up" in={checked} mountOnEnter unmountOnExit>
-        <img src={cake_pic} width="50" height="auto" />
+        {isCorrect ? <p>✅</p> : <p>❌</p>}
       </Slide>
     </>
   );
