@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/twilight/static/css/main.ab21a1c0.chunk.css",
-    "main.js": "/twilight/static/js/main.94f78f88.chunk.js",
-    "main.js.map": "/twilight/static/js/main.94f78f88.chunk.js.map",
+    "main.js": "/twilight/static/js/main.a3270959.chunk.js",
+    "main.js.map": "/twilight/static/js/main.a3270959.chunk.js.map",
     "runtime-main.js": "/twilight/static/js/runtime-main.bd573ea7.js",
     "runtime-main.js.map": "/twilight/static/js/runtime-main.bd573ea7.js.map",
     "static/js/2.cda6a2cd.chunk.js": "/twilight/static/js/2.cda6a2cd.chunk.js",
@@ -12,13 +12,13 @@
     "index.html": "/twilight/index.html",
     "static/css/main.ab21a1c0.chunk.css.map": "/twilight/static/css/main.ab21a1c0.chunk.css.map",
     "static/js/2.cda6a2cd.chunk.js.LICENSE.txt": "/twilight/static/js/2.cda6a2cd.chunk.js.LICENSE.txt",
-    "static/media/cake_pic.cb291220.png": "/twilight/static/media/cake_pic.cb291220.png",
+    "static/media/cake_pic.7cacb105.png": "/twilight/static/media/cake_pic.7cacb105.png",
     "static/media/twilight_dubstep.023697da.mp3": "/twilight/static/media/twilight_dubstep.023697da.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.bd573ea7.js",
     "static/js/2.cda6a2cd.chunk.js",
     "static/css/main.ab21a1c0.chunk.css",
-    "static/js/main.94f78f88.chunk.js"
+    "static/js/main.a3270959.chunk.js"
   ]
 }
