@@ -19,7 +19,9 @@ const Answer = ({ checked, isCorrect }) => {
       <Snackbar
         open={checked}
         onClose={() => {}}
-        TransitionComponent={(props) => <Slide {...props} direction="up" />}
+        TransitionComponent={(props) => (
+          <Slide {...props} direction="up" unmountOnExit />
+        )}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
       >
         {isCorrect ? (
