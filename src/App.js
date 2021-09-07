@@ -100,7 +100,7 @@ const App = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <Zoom in={true} style={{ transitionDelay: "15000ms" }}>
+                <Zoom in={true} style={{ transitionDelay: "5000ms" }}>
                   <Button
                     variant={"contained"}
                     size={"large"}
