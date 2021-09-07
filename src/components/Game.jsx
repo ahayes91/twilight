@@ -74,10 +74,11 @@ const Game = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
+      style={{ paddingTop: "5vh" }}
     >
       {currentFakeQuotes.length > 0 ? (
         <>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Quote
               quote={leftQuote}
               onCardSelect={handleCardSelect}
@@ -85,7 +86,7 @@ const Game = () => {
               enabled={!checked}
             />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} sm={6}>
             <Quote
               quote={rightQuote}
               onCardSelect={handleCardSelect}
@@ -120,9 +121,23 @@ const Game = () => {
         </>
       ) : (
         <>
-          <Typography variant="h4" component="p">
-            You're done! You scored {score}/13!
-          </Typography>
+          <Grid item xs={12}>
+            <Typography variant="h3" component="p">
+              You scored {score}/13!
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h4" component="p">
+              {score < 13
+                ? `Pathetic. You're a disgrace.`
+                : `Amazing! Not even our auld Arse could catch you!`}
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="h5" component="p">
+              Happy birthday Úna, we love you loads!
+            </Typography>
+          </Grid>
         </>
       )}
     </Grid>

@@ -11,9 +11,9 @@ export default function Quote({ quote, onCardSelect, selected, enabled }) {
   };
 
   const selectedAnswer = {
-    WebkitBoxShadow: "inset 0px 0px 0px 5px red",
-    MozBoxShadow: "inset 0px 0px 0px 5px red",
-    boxShadow: "inset 0px 0px 0px 5px red",
+    WebkitBoxShadow: "inset 0px 0px 0px 5px #b2dfdb",
+    MozBoxShadow: "inset 0px 0px 0px 5px #b2dfdb",
+    boxShadow: "inset 0px 0px 0px 5px #b2dfdb",
   };
 
   return (
