@@ -1,24 +1,25 @@
 {
   "files": {
-    "main.css": "/twilight/static/css/main.ab21a1c0.chunk.css",
-    "main.js": "/twilight/static/js/main.a3270959.chunk.js",
-    "main.js.map": "/twilight/static/js/main.a3270959.chunk.js.map",
-    "runtime-main.js": "/twilight/static/js/runtime-main.bd573ea7.js",
-    "runtime-main.js.map": "/twilight/static/js/runtime-main.bd573ea7.js.map",
-    "static/js/2.cda6a2cd.chunk.js": "/twilight/static/js/2.cda6a2cd.chunk.js",
-    "static/js/2.cda6a2cd.chunk.js.map": "/twilight/static/js/2.cda6a2cd.chunk.js.map",
-    "static/js/3.194b73fd.chunk.js": "/twilight/static/js/3.194b73fd.chunk.js",
-    "static/js/3.194b73fd.chunk.js.map": "/twilight/static/js/3.194b73fd.chunk.js.map",
+    "main.css": "/twilight/static/css/main.4a791e9f.chunk.css",
+    "main.js": "/twilight/static/js/main.ca3e2adf.chunk.js",
+    "main.js.map": "/twilight/static/js/main.ca3e2adf.chunk.js.map",
+    "runtime-main.js": "/twilight/static/js/runtime-main.8477acb9.js",
+    "runtime-main.js.map": "/twilight/static/js/runtime-main.8477acb9.js.map",
+    "static/js/2.cf38ea2a.chunk.js": "/twilight/static/js/2.cf38ea2a.chunk.js",
+    "static/js/2.cf38ea2a.chunk.js.map": "/twilight/static/js/2.cf38ea2a.chunk.js.map",
+    "static/js/3.374065fe.chunk.js": "/twilight/static/js/3.374065fe.chunk.js",
+    "static/js/3.374065fe.chunk.js.map": "/twilight/static/js/3.374065fe.chunk.js.map",
     "index.html": "/twilight/index.html",
-    "static/css/main.ab21a1c0.chunk.css.map": "/twilight/static/css/main.ab21a1c0.chunk.css.map",
-    "static/js/2.cda6a2cd.chunk.js.LICENSE.txt": "/twilight/static/js/2.cda6a2cd.chunk.js.LICENSE.txt",
+    "static/css/main.4a791e9f.chunk.css.map": "/twilight/static/css/main.4a791e9f.chunk.css.map",
+    "static/js/2.cf38ea2a.chunk.js.LICENSE.txt": "/twilight/static/js/2.cf38ea2a.chunk.js.LICENSE.txt",
     "static/media/cake_pic.7cacb105.png": "/twilight/static/media/cake_pic.7cacb105.png",
+    "static/media/right.bf3d6f97.png": "/twilight/static/media/right.bf3d6f97.png",
     "static/media/twilight_dubstep.023697da.mp3": "/twilight/static/media/twilight_dubstep.023697da.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.bd573ea7.js",
-    "static/js/2.cda6a2cd.chunk.js",
-    "static/css/main.ab21a1c0.chunk.css",
-    "static/js/main.a3270959.chunk.js"
+    "static/js/runtime-main.8477acb9.js",
+    "static/js/2.cf38ea2a.chunk.js",
+    "static/css/main.4a791e9f.chunk.css",
+    "static/js/main.ca3e2adf.chunk.js"
   ]
 }
